@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="UDPLauncher_GUI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ProgramToLaunch" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files\XBMC\XBMC.exe</Value>
+    </Setting>
+    <Setting Name="XBMCEvent" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ExecBuiltIn(ActivateWindow(VideoLibrary,TvShowTitles))</Value>
+    </Setting>
+    <Setting Name="XBMCHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="XBMCPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="XBMCUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="XBMCPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">8080</Value>
+    </Setting>
+    <Setting Name="PortToListenTo" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">9</Value>
+    </Setting>
+    <Setting Name="ExitIfOpen" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UseXBMCEvent" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
