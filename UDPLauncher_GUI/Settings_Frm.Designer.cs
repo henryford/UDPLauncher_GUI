@@ -45,11 +45,12 @@
             this.chkExitIf = new System.Windows.Forms.CheckBox();
             this.txtPort = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.chkAutoStart = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btCancel
             // 
-            this.btCancel.Location = new System.Drawing.Point(444, 227);
+            this.btCancel.Location = new System.Drawing.Point(444, 221);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(75, 23);
             this.btCancel.TabIndex = 0;
@@ -59,7 +60,7 @@
             // 
             // btSave
             // 
-            this.btSave.Location = new System.Drawing.Point(363, 227);
+            this.btSave.Location = new System.Drawing.Point(363, 221);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(75, 23);
             this.btSave.TabIndex = 1;
@@ -71,7 +72,7 @@
             // 
             this.chkEvent.AutoSize = true;
             this.chkEvent.Font = new System.Drawing.Font("Calibri", 9F);
-            this.chkEvent.Location = new System.Drawing.Point(15, 135);
+            this.chkEvent.Location = new System.Drawing.Point(15, 160);
             this.chkEvent.Name = "chkEvent";
             this.chkEvent.Size = new System.Drawing.Size(117, 18);
             this.chkEvent.TabIndex = 2;
@@ -93,7 +94,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label2.Location = new System.Drawing.Point(12, 165);
+            this.label2.Location = new System.Drawing.Point(12, 181);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 17);
             this.label2.TabIndex = 4;
@@ -118,14 +119,14 @@
             // 
             // txtHost
             // 
-            this.txtHost.Location = new System.Drawing.Point(15, 183);
+            this.txtHost.Location = new System.Drawing.Point(18, 199);
             this.txtHost.Name = "txtHost";
             this.txtHost.Size = new System.Drawing.Size(115, 20);
             this.txtHost.TabIndex = 7;
             // 
             // txtXBMCPort
             // 
-            this.txtXBMCPort.Location = new System.Drawing.Point(133, 183);
+            this.txtXBMCPort.Location = new System.Drawing.Point(133, 199);
             this.txtXBMCPort.Name = "txtXBMCPort";
             this.txtXBMCPort.Size = new System.Drawing.Size(48, 20);
             this.txtXBMCPort.TabIndex = 9;
@@ -134,7 +135,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label3.Location = new System.Drawing.Point(130, 165);
+            this.label3.Location = new System.Drawing.Point(130, 181);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 17);
             this.label3.TabIndex = 8;
@@ -142,7 +143,7 @@
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(187, 183);
+            this.txtUser.Location = new System.Drawing.Point(187, 199);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(115, 20);
             this.txtUser.TabIndex = 11;
@@ -151,7 +152,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label4.Location = new System.Drawing.Point(184, 165);
+            this.label4.Location = new System.Drawing.Point(184, 181);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 17);
             this.label4.TabIndex = 10;
@@ -159,7 +160,7 @@
             // 
             // txtPW
             // 
-            this.txtPW.Location = new System.Drawing.Point(311, 183);
+            this.txtPW.Location = new System.Drawing.Point(311, 199);
             this.txtPW.Name = "txtPW";
             this.txtPW.Size = new System.Drawing.Size(115, 20);
             this.txtPW.TabIndex = 13;
@@ -168,7 +169,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 10F);
-            this.label5.Location = new System.Drawing.Point(308, 165);
+            this.label5.Location = new System.Drawing.Point(308, 181);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 17);
             this.label5.TabIndex = 12;
@@ -203,11 +204,23 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "Port on which I\'ll listen for packets:";
             // 
+            // chkAutoStart
+            // 
+            this.chkAutoStart.AutoSize = true;
+            this.chkAutoStart.Location = new System.Drawing.Point(15, 123);
+            this.chkAutoStart.Name = "chkAutoStart";
+            this.chkAutoStart.Size = new System.Drawing.Size(205, 17);
+            this.chkAutoStart.TabIndex = 17;
+            this.chkAutoStart.Text = "Start Listener when Program launches";
+            this.chkAutoStart.UseVisualStyleBackColor = true;
+            this.chkAutoStart.CheckedChanged += new System.EventHandler(this.chkAutoStart_CheckedChanged);
+            // 
             // Settings_Frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 262);
+            this.ClientSize = new System.Drawing.Size(520, 246);
+            this.Controls.Add(this.chkAutoStart);
             this.Controls.Add(this.txtPort);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.chkExitIf);
@@ -251,5 +264,6 @@
         private System.Windows.Forms.CheckBox chkExitIf;
         private System.Windows.Forms.TextBox txtPort;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox chkAutoStart;
     }
 }

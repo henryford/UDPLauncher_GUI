@@ -16,7 +16,7 @@ namespace UDPLauncher_GUI
         #region HelpStuff
         string XBMCPassword, XBMCUsername, ProgramToLaunch, XBMCHost, XBMCEvent;
         int RunningPort, XBMCPort;
-        bool ExitIfOpen, UseEvent;
+        bool ExitIfOpen, UseEvent, Autostart;
 
         //Helper functions
         private void LoadSettings()
@@ -30,6 +30,7 @@ namespace UDPLauncher_GUI
             ProgramToLaunch = Settings.Default.ProgramToLaunch;
             ExitIfOpen = Settings.Default.ExitIfOpen;
             UseEvent = Settings.Default.UseXBMCEvent;
+            Autostart = Settings.Default.Autostart;
 
             this.txtProg.Text = this.ProgramToLaunch;
             this.txtPort.Text = this.RunningPort.ToString();
@@ -60,6 +61,11 @@ namespace UDPLauncher_GUI
             else
                 this.chkExitIf.Checked = true;
 
+            if (!this.Autostart)
+                this.chkAutoStart.Checked = false;
+            else
+                this.chkAutoStart.Checked = true;
+
             this.Update();
         }
 
@@ -89,6 +95,7 @@ namespace UDPLauncher_GUI
             Settings.Default.ProgramToLaunch = ProgramToLaunch;
             Settings.Default.ExitIfOpen = ExitIfOpen;
             Settings.Default.UseXBMCEvent = UseEvent;
+            Settings.Default.Autostart = Autostart;
             Settings.Default.Save();
         }
         #endregion
@@ -186,6 +193,14 @@ namespace UDPLauncher_GUI
             }
 
             this.Update();
+        }
+
+        private void chkAutoStart_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkAutoStart.Checked)
+                Autostart = true;
+            else
+                Autostart = false;
         }
 
     }

@@ -16,7 +16,7 @@ namespace UDPLauncher_GUI
     {
         string XBMCPassword, XBMCUsername, ProgramToLaunch, XBMCHost, XBMCEvent;
         int RunningPort, XBMCPort;
-        bool ExitIfOpen, UseEvent;
+        bool ExitIfOpen, UseEvent, Autostart;
         bool running;
         UDPListener Listener;
         Thread ListenerThread;
@@ -28,6 +28,16 @@ namespace UDPLauncher_GUI
             this.LoadSettings();
             running = false;
             Listener = new UDPListener(ProgramToLaunch, RunningPort, ExitIfOpen, UseEvent, XBMCUsername, XBMCPassword, XBMCHost, XBMCPort, XBMCEvent);
+
+            if (Autostart)
+            {
+                btStartStop.Text = "Stop";
+                lblStatus.Text = "Running";
+                lblStatus.ForeColor = Color.Green;
+                ListenerThread = new Thread(Listener.StartListener);
+                ListenerThread.Start();
+                running = true;
+            }
         }
 
         private void tSSettings_Click(object sender, EventArgs e)
@@ -52,6 +62,7 @@ namespace UDPLauncher_GUI
             ProgramToLaunch = Settings.Default.ProgramToLaunch;
             ExitIfOpen = Settings.Default.ExitIfOpen;
             UseEvent = Settings.Default.UseXBMCEvent;
+            Autostart = Settings.Default.Autostart;
 
             if (running)
             {
