@@ -38,10 +38,11 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.nIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.cMSTray = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cMSTray_txtStatus = new System.Windows.Forms.ToolStripTextBox();
             this.cMSTray_Start = new System.Windows.Forms.ToolStripMenuItem();
             this.cMSTray_Stop = new System.Windows.Forms.ToolStripMenuItem();
             this.cMSTray_Exit = new System.Windows.Forms.ToolStripMenuItem();
-            this.cMSTray_txtStatus = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.cMSTray.SuspendLayout();
             this.SuspendLayout();
@@ -115,12 +116,20 @@
             // 
             this.cMSTray.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cMSTray_txtStatus,
+            this.toolStripSeparator2,
             this.cMSTray_Start,
             this.cMSTray_Stop,
             this.cMSTray_Exit});
             this.cMSTray.Name = "cMSTray";
-            this.cMSTray.Size = new System.Drawing.Size(163, 117);
+            this.cMSTray.Size = new System.Drawing.Size(163, 123);
             this.cMSTray.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cMSTray_ItemClicked);
+            // 
+            // cMSTray_txtStatus
+            // 
+            this.cMSTray_txtStatus.Name = "cMSTray_txtStatus";
+            this.cMSTray_txtStatus.ReadOnly = true;
+            this.cMSTray_txtStatus.Size = new System.Drawing.Size(100, 23);
+            this.cMSTray_txtStatus.Text = "Not Running";
             // 
             // cMSTray_Start
             // 
@@ -140,11 +149,10 @@
             this.cMSTray_Exit.Size = new System.Drawing.Size(162, 22);
             this.cMSTray_Exit.Text = "Close Listener";
             // 
-            // cMSTray_txtStatus
+            // toolStripSeparator2
             // 
-            this.cMSTray_txtStatus.Name = "cMSTray_txtStatus";
-            this.cMSTray_txtStatus.Size = new System.Drawing.Size(100, 23);
-            this.cMSTray_txtStatus.Text = "Not Running";
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(159, 6);
             // 
             // UDPLauncher_Main_Frm
             // 
@@ -183,6 +191,7 @@
         private System.Windows.Forms.ToolStripMenuItem cMSTray_Start;
         private System.Windows.Forms.ToolStripMenuItem cMSTray_Stop;
         private System.Windows.Forms.ToolStripMenuItem cMSTray_Exit;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }
 

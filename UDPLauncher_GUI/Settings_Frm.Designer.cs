@@ -53,7 +53,7 @@
             this.btCancel.Location = new System.Drawing.Point(444, 221);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(75, 23);
-            this.btCancel.TabIndex = 0;
+            this.btCancel.TabIndex = 11;
             this.btCancel.Text = "Cancel";
             this.btCancel.UseVisualStyleBackColor = true;
             this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
@@ -63,7 +63,7 @@
             this.btSave.Location = new System.Drawing.Point(363, 221);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(75, 23);
-            this.btSave.TabIndex = 1;
+            this.btSave.TabIndex = 10;
             this.btSave.Text = "Save";
             this.btSave.UseVisualStyleBackColor = true;
             this.btSave.Click += new System.EventHandler(this.btSave_Click);
@@ -75,7 +75,7 @@
             this.chkEvent.Location = new System.Drawing.Point(15, 160);
             this.chkEvent.Name = "chkEvent";
             this.chkEvent.Size = new System.Drawing.Size(117, 18);
-            this.chkEvent.TabIndex = 2;
+            this.chkEvent.TabIndex = 5;
             this.chkEvent.Text = "Use XBMC Event?";
             this.chkEvent.UseVisualStyleBackColor = true;
             this.chkEvent.CheckedChanged += new System.EventHandler(this.chkEvent_CheckedChanged);
@@ -87,7 +87,7 @@
             this.label1.Location = new System.Drawing.Point(12, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 18);
-            this.label1.TabIndex = 3;
+            this.label1.TabIndex = 20;
             this.label1.Text = "Path of the Program to launch:";
             // 
             // label2
@@ -105,14 +105,14 @@
             this.txtProg.Location = new System.Drawing.Point(15, 24);
             this.txtProg.Name = "txtProg";
             this.txtProg.Size = new System.Drawing.Size(426, 20);
-            this.txtProg.TabIndex = 5;
+            this.txtProg.TabIndex = 0;
             // 
             // btBrowse
             // 
             this.btBrowse.Location = new System.Drawing.Point(444, 22);
             this.btBrowse.Name = "btBrowse";
             this.btBrowse.Size = new System.Drawing.Size(75, 23);
-            this.btBrowse.TabIndex = 6;
+            this.btBrowse.TabIndex = 1;
             this.btBrowse.Text = "Browse";
             this.btBrowse.UseVisualStyleBackColor = true;
             this.btBrowse.Click += new System.EventHandler(this.btBrowse_Click);
@@ -122,14 +122,14 @@
             this.txtHost.Location = new System.Drawing.Point(18, 199);
             this.txtHost.Name = "txtHost";
             this.txtHost.Size = new System.Drawing.Size(115, 20);
-            this.txtHost.TabIndex = 7;
+            this.txtHost.TabIndex = 6;
             // 
             // txtXBMCPort
             // 
             this.txtXBMCPort.Location = new System.Drawing.Point(133, 199);
             this.txtXBMCPort.Name = "txtXBMCPort";
             this.txtXBMCPort.Size = new System.Drawing.Size(48, 20);
-            this.txtXBMCPort.TabIndex = 9;
+            this.txtXBMCPort.TabIndex = 7;
             // 
             // label3
             // 
@@ -146,7 +146,7 @@
             this.txtUser.Location = new System.Drawing.Point(187, 199);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(115, 20);
-            this.txtUser.TabIndex = 11;
+            this.txtUser.TabIndex = 8;
             // 
             // label4
             // 
@@ -163,7 +163,7 @@
             this.txtPW.Location = new System.Drawing.Point(311, 199);
             this.txtPW.Name = "txtPW";
             this.txtPW.Size = new System.Drawing.Size(115, 20);
-            this.txtPW.TabIndex = 13;
+            this.txtPW.TabIndex = 9;
             // 
             // label5
             // 
@@ -182,7 +182,7 @@
             this.chkExitIf.Location = new System.Drawing.Point(15, 50);
             this.chkExitIf.Name = "chkExitIf";
             this.chkExitIf.Size = new System.Drawing.Size(225, 18);
-            this.chkExitIf.TabIndex = 14;
+            this.chkExitIf.TabIndex = 2;
             this.chkExitIf.Text = "Exit the above program if is running?";
             this.chkExitIf.UseVisualStyleBackColor = true;
             this.chkExitIf.CheckedChanged += new System.EventHandler(this.chkExitIf_Changed);
@@ -192,7 +192,7 @@
             this.txtPort.Location = new System.Drawing.Point(15, 97);
             this.txtPort.Name = "txtPort";
             this.txtPort.Size = new System.Drawing.Size(115, 20);
-            this.txtPort.TabIndex = 16;
+            this.txtPort.TabIndex = 3;
             // 
             // label6
             // 
@@ -210,7 +210,7 @@
             this.chkAutoStart.Location = new System.Drawing.Point(15, 123);
             this.chkAutoStart.Name = "chkAutoStart";
             this.chkAutoStart.Size = new System.Drawing.Size(205, 17);
-            this.chkAutoStart.TabIndex = 17;
+            this.chkAutoStart.TabIndex = 4;
             this.chkAutoStart.Text = "Start Listener when Program launches";
             this.chkAutoStart.UseVisualStyleBackColor = true;
             this.chkAutoStart.CheckedChanged += new System.EventHandler(this.chkAutoStart_CheckedChanged);

@@ -24,7 +24,7 @@ namespace UDPLauncher_GUI
         public UDPLauncher_Main_Frm()
         {
             InitializeComponent();
-
+            cMSTray_txtStatus.BackColor = Color.White;
             nIcon.Icon = Resources.picBulbOff;
             nIcon.BalloonTipText = "Listener not running.";
             nIcon.BalloonTipTitle = "UDPLauncher";
