@@ -37,7 +37,13 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.nIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.cMSTray = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cMSTray_Start = new System.Windows.Forms.ToolStripMenuItem();
+            this.cMSTray_Stop = new System.Windows.Forms.ToolStripMenuItem();
+            this.cMSTray_Exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.cMSTray_txtStatus = new System.Windows.Forms.ToolStripTextBox();
             this.toolStrip1.SuspendLayout();
+            this.cMSTray.SuspendLayout();
             this.SuspendLayout();
             // 
             // btStartStop
@@ -102,7 +108,43 @@
             this.nIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("nIcon.Icon")));
             this.nIcon.Text = "UDPLauncher";
             this.nIcon.Visible = true;
+            this.nIcon.Click += new System.EventHandler(this.nIcon_Click);
             this.nIcon.DoubleClick += new System.EventHandler(this.nIcon_DoubleClick);
+            // 
+            // cMSTray
+            // 
+            this.cMSTray.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cMSTray_txtStatus,
+            this.cMSTray_Start,
+            this.cMSTray_Stop,
+            this.cMSTray_Exit});
+            this.cMSTray.Name = "cMSTray";
+            this.cMSTray.Size = new System.Drawing.Size(163, 117);
+            this.cMSTray.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cMSTray_ItemClicked);
+            // 
+            // cMSTray_Start
+            // 
+            this.cMSTray_Start.Name = "cMSTray_Start";
+            this.cMSTray_Start.Size = new System.Drawing.Size(162, 22);
+            this.cMSTray_Start.Text = "Start the Listener";
+            // 
+            // cMSTray_Stop
+            // 
+            this.cMSTray_Stop.Name = "cMSTray_Stop";
+            this.cMSTray_Stop.Size = new System.Drawing.Size(162, 22);
+            this.cMSTray_Stop.Text = "Stop the Listener";
+            // 
+            // cMSTray_Exit
+            // 
+            this.cMSTray_Exit.Name = "cMSTray_Exit";
+            this.cMSTray_Exit.Size = new System.Drawing.Size(162, 22);
+            this.cMSTray_Exit.Text = "Close Listener";
+            // 
+            // cMSTray_txtStatus
+            // 
+            this.cMSTray_txtStatus.Name = "cMSTray_txtStatus";
+            this.cMSTray_txtStatus.Size = new System.Drawing.Size(100, 23);
+            this.cMSTray_txtStatus.Text = "Not Running";
             // 
             // UDPLauncher_Main_Frm
             // 
@@ -120,6 +162,8 @@
             this.Resize += new System.EventHandler(this.UDPLauncher_Main_Frm_Resize);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.cMSTray.ResumeLayout(false);
+            this.cMSTray.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,6 +178,11 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.NotifyIcon nIcon;
+        private System.Windows.Forms.ContextMenuStrip cMSTray;
+        private System.Windows.Forms.ToolStripTextBox cMSTray_txtStatus;
+        private System.Windows.Forms.ToolStripMenuItem cMSTray_Start;
+        private System.Windows.Forms.ToolStripMenuItem cMSTray_Stop;
+        private System.Windows.Forms.ToolStripMenuItem cMSTray_Exit;
     }
 }
 
