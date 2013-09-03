@@ -113,6 +113,7 @@
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btStartStop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UDPLauncher_Main_Frm";
             this.Text = "UDPLauncher";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UDPLauncher_Main_Frm_FormClosing);

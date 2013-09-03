@@ -20,11 +20,11 @@ namespace UDPLauncher_GUI
         bool running;
         UDPListener Listener;
         Thread ListenerThread;
-                
     
         public UDPLauncher_Main_Frm()
         {
             InitializeComponent();
+            nIcon.Icon = Resources.picBulbOff;
             this.LoadSettings();
             running = false;
             Listener = new UDPListener(ProgramToLaunch, RunningPort, ExitIfOpen, UseEvent, XBMCUsername, XBMCPassword, XBMCHost, XBMCPort, XBMCEvent);
@@ -37,6 +37,9 @@ namespace UDPLauncher_GUI
                 ListenerThread = new Thread(Listener.StartListener);
                 ListenerThread.Start();
                 running = true;
+                this.Icon = Resources.picBulbOn;
+                nIcon.Icon = Resources.picBulbOn;
+                this.Update();
             }
         }
 
@@ -84,6 +87,9 @@ namespace UDPLauncher_GUI
                 ListenerThread = new Thread(Listener.StartListener);
                 ListenerThread.Start();
                 running = true;
+                this.Icon = Resources.picBulbOn;
+                nIcon.Icon = Resources.picBulbOn;
+                this.Update();
             }
         }
 
@@ -97,6 +103,9 @@ namespace UDPLauncher_GUI
                 ListenerThread = new Thread(Listener.StartListener);
                 ListenerThread.Start();
                 running = true;
+                this.Icon = Resources.picBulbOn;
+                nIcon.Icon = Resources.picBulbOn;
+                this.Update();
             }
             else
             {
@@ -107,6 +116,9 @@ namespace UDPLauncher_GUI
                 btStartStop.Text = "Start";
                 lblStatus.Text = "Not Running.";
                 lblStatus.ForeColor = Color.Red;
+                this.Icon = Resources.picBulbOff;
+                nIcon.Icon = Resources.picBulbOff;
+                this.Update();
             }
         }
 
